@@ -1,0 +1,73 @@
+html,
+body,
+p {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.container  {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+}
+
+.policy_content .policy_ship {
+    background-color: aliceblue;
+    padding: 15px;
+}
+
+.sidebar {
+    background-color: aliceblue;
+    padding: 20px;
+}
+
+.policy {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2,
+h3 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #b22222;
+    font-weight: bold;
+}
+
+h3 {
+    color: #228b22;
+    font-weight: bold;
+}
+
+h2:hover, h3:hover {
+    color: #ff4500;
+    transition: 0.3s;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+p.note {
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.policy_content li.policy_item {
+    padding-bottom: 10px;
+}

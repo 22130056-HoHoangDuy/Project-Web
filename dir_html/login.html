@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang Đăng Nhập</title>
+    <link rel="stylesheet" href="../dir_css/login.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="tabs">
+        <div id="login-tab" class="active" onclick="toggleForm('login')">
+          Đăng Nhập
+        </div>
+        <div id="register-tab" onclick="toggleForm('register')">Đăng Ký</div>
+      </div>
+      <!--Form đăng nhập-->
+      <div class="form-container" id="login-form" style="display: block">
+        <h2>Đăng Nhập</h2>
+
+        <div class="form-gr">
+          <input
+            type="text"
+            id="fullname"
+            placeholder="Tên người dùng"
+            required
+          />
+        </div>
+        <div class="form-gr">
+          <input
+            type="password"
+            id="log-password"
+            name="password"
+            placeholder="Nhập mật khẩu"
+            required
+          />
+        </div>
+        <div class="form-gr">
+          <button onclick="login()">Đăng Nhập</button>
+        </div>
+        <div class="form-gr">
+          <p><a href="quen-mat-khau.html">Quên mật khẩu?</a></p>
+        </div>
+      </div>
+      <!--Form Đăng Ký-->
+      <div class="form-container" id="register-form" style="display: none">
+        <h2>Đăng Ký</h2>
+        <div class="form-gr">
+          <input
+            type="text"
+            id="fullname"
+            placeholder="Tên người dùng"
+            required
+          />
+        </div>
+        <div class="form-gr">
+          <input
+            type="password"
+            id="re-password"
+            placeholder="Mật khẩu"
+            required
+          />
+        </div>
+        <div class="form-gr">
+          <input
+            type="password"
+            id="reg-confirm-password"
+            placeholder="Nhập lại mật khẩu"
+            required
+          />
+        </div>
+        <div class="form-gr">
+          <button onclick="register()">Đăng Ký</button>
+        </div>
+        <div class="form-gr">
+          <p>
+            Bạn đã có mật khẩu?<a onclick="toggleForm('login')">Đăng Nhập</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="/dir_js/login.js"></script>
+  </body>
+</html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../dir_css/product.css" />
+    <link rel="stylesheet" href="../css/product.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -30,7 +30,7 @@
                 <div class="product-slides col-12 col-md-5 col-lg-5">
                     <div class="fea-img-blk">
                         <div id="fea-slider">
-                            <img src="../image/may-do-huyet-ap-bap-tay-dien-tu-vofonn-bsav1.jpg" alt=""
+                            <img src="../images/may-do-huyet-ap-bap-tay-dien-tu-vofonn-bsav1.jpg" alt=""
                                 class="product_image img-fluid" />
                         </div>
                     </div>
@@ -385,6 +385,86 @@
                 }
             });
         });
+    </script>
+    <script>
+        const stars = document.querySelectorAll(".star");
+
+        stars.forEach((star, index) => {
+            star.addEventListener("click", () => {
+                stars.forEach((s, i) => {
+                    s.classList.toggle("fullStar", i <= index);
+                });
+            });
+        });
+
+        stars.forEach((star, index) => {
+            star.addEventListener("mouseenter", () => {
+                stars.forEach((s, i) => {
+                    if (i <= index) {
+                        s.classList.add("tmp_fs");
+                    } else {
+                        s.classList.add("tmp_es");
+                    }
+                });
+            });
+
+            star.addEventListener("mouseleave", () => {
+                stars.forEach((s) => {
+                    s.classList.remove("tmp_fs", "tmp_es");
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const navLinks = document.querySelectorAll(".nav-link");
+
+            navLinks.forEach((link) => {
+                link.addEventListener("click", (event) => {
+                    const targetId = link.getAttribute("href");
+
+                    if (targetId.startsWith("#")) {
+                        event.preventDefault();
+
+                        navLinks.forEach((nav) => nav.classList.remove("active"));
+
+                        link.classList.add("active");
+
+                        document.querySelector(targetId)?.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start"
+                        });
+                    }
+                });
+            });
+        });
+
+    </script>
+    <script>
+        function openModal() {
+            document.getElementById("reviewModal").style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("reviewModal").style.display = "none";
+        }
+
+        document.querySelectorAll(".star").forEach((star, index) => {
+            star.addEventListener("click", function () {
+                let stars = document.querySelectorAll(".star");
+                stars.forEach((s, i) => {
+                    s.classList.toggle("active", i <= index);
+                });
+            });
+        });
+
+        window.onclick = function (event) {
+            let modal = document.getElementById("reviewModal");
+            if (event.target == modal) {
+                closeModal();
+            }
+        };
+
     </script>
 </body>
 

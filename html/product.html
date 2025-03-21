@@ -317,4 +317,75 @@
             </div>
         </div>
     </div>
-    
+    <script>
+        const decreaseBtn = document.getElementById("decreaseQty");
+        const increaseBtn = document.getElementById("increaseQty");
+        const qtyInput = document.getElementById("qty");
+
+        // Update buttons' disabled state
+        function updateButtons() {
+            const value = parseInt(qtyInput.value, 10);
+            const min = parseInt(qtyInput.getAttribute("min"), 10);
+            const max = parseInt(qtyInput.getAttribute("max"), 10);
+
+            decreaseBtn.disabled = value <= min;
+            increaseBtn.disabled = value >= max;
+        }
+
+        // Decrease quantity
+        decreaseBtn.addEventListener("click", () => {
+            const value = parseInt(qtyInput.value, 10);
+            const min = parseInt(qtyInput.getAttribute("min"), 10);
+
+            if (value > min) {
+                qtyInput.value = value - 1;
+            }
+            updateButtons();
+        });
+
+        // Increase quantity
+        increaseBtn.addEventListener("click", () => {
+            const value = parseInt(qtyInput.value, 10);
+            const max = parseInt(qtyInput.getAttribute("max"), 10);
+
+            if (value < max) {
+                qtyInput.value = value + 1;
+            }
+            updateButtons();
+        });
+
+        // Update buttons on input change
+        qtyInput.addEventListener("input", () => {
+            const value = parseInt(qtyInput.value, 10);
+            const min = parseInt(qtyInput.getAttribute("min"), 10);
+            const max = parseInt(qtyInput.getAttribute("max"), 10);
+
+            if (isNaN(value) || value < min) {
+                qtyInput.value = min;
+            } else if (value > max) {
+                qtyInput.value = max;
+            }
+            updateButtons();
+        });
+
+        updateButtons();
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const topbar = document.querySelector(".detail-product");
+            const mainNav = document.querySelector("#navbar_scroll");
+
+            window.addEventListener("scroll", () => {
+                const topbarBottom = topbar.getBoundingClientRect().bottom;
+
+                if (topbarBottom <= 0) {
+                    mainNav.classList.add("fixed");
+                } else {
+                    mainNav.classList.remove("fixed");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

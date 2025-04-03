@@ -1,0 +1,176 @@
+/* product_listAdmin.css */
+
+/* Tổng quan */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.table thead {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    text-align: left;
+}
+
+.table th, 
+.table td {
+    padding: 10px;
+    border: 1px solid #e3e3e3;
+}
+
+.table th {
+    background-color: #f5f5f5;
+}
+
+.table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.table .avatar-md {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Badge */
+.badge {
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 12px;
+}
+
+.bg-light {
+    background-color: #e7e7e7;
+}
+
+.text-dark {
+    color: #333;
+}
+
+.text-warning {
+    color: #ffc107;
+}
+
+/* Actions */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.btn-view {
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+.btn-view:hover {
+    background-color: #138496;
+}
+
+.btn-edit {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.btn-edit:hover {
+    background-color: #e0a800;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+/* Pagination */
+.pagination {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.pagination .page-item {
+    margin: 0 5px;
+}
+
+.pagination .page-link {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.pagination .page-link:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.pagination .active .page-link {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}

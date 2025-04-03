@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="..//dir_css/cart.css">
+</head>
+
+<body>
+<div id="header"></div>
+<!--Khung ngoài-->
+<div class="cart-container">
+    <!--Trái: các sản phẩm trong giỏ hàng-->
+    <div class="card-left">
+        <div class="cart-left-header">
+            <input type="checkbox" id="select-all"/>
+            <span class="header-title">Sản phẩm</span>
+            <span class="header-quantity">Số lượng</span>
+            <span class="header-remove">Xóa</span>
+        </div>
+        <div class="card-left-product">
+            <div class="cart-main">
+                <!-- Sản phẩm mẫu -->
+                <div class="cart-item">
+                    <input type="checkbox" class="select-item"/>
+                    <div class="item-info">
+                        <img src="../image/Thiết bị y tế/Máy đo huyết áp/7143T1 full pk.webp" alt="Máy đo huyết áp"
+                             class="item-image">
+                        <span class="item-name">Máy đo huyết áp Omron 7123T1</span>
+                        <span class="item-price">1.240.000 VNĐ</span>
+                    </div>
+                    <div class="item-quantity">
+                        <button class="quantity-decrease">-</button>
+                        <input type="number" value="1" min="1"/>
+                        <button class="quantity-increase">+</button>
+                    </div>
+                    <span class="item-remove">🗑️</span>
+                </div>
+
+                <div class="cart-item">
+                    <input type="checkbox" class="select-item"/>
+                    <div class="item-info">
+                        <img src="..//image/Vật tư tiêu hao/Khẩu trang/SM/SM-1.webp" alt="Khẩu trang"
+                             class="item-image">
+                        <span class="item-name">Khẩu trang 3D trẻ em quai vải Swan Mask</span>
+                        <span class="item-price">20.400 VNĐ</span>
+                    </div>
+                    <div class="item-quantity">
+                        <button class="quantity-decrease">-</button>
+                        <input type="number" value="1" min="1"/>
+                        <button class="quantity-increase">+</button>
+                    </div>
+                    <span class="item-remove">🗑️</span>
+                </div>
+
+
+                <div class="cart-item">
+                    <input type="checkbox" class="select-item"/>
+                    <div class="item-info">
+                        <img src="..//image/Dụng cụ chăm sóc cá nhân/Miếng dán/Salonpas/Salonpas-1.webp" alt="Salonpas"
+                             class="item-image">
+                        <span class="item-name">Miếng dán giữ nhiệt Salonpas</span>
+                        <span class="item-price">140.000 VNĐ</span>
+                    </div>
+                    <div class="item-quantity">
+                        <button class="quantity-decrease">-</button>
+                        <input type="number" value="1" min="1"/>
+                        <button class="quantity-increase">+</button>
+                    </div>
+                    <span class="item-remove">🗑️</span>
+                </div>
+
+
+            </div>
+        </div>
+        <!--Phải: thông tin thanh toán-->
+        <div class="cart-right">
+            <h3>Thông tin thanh toán</h3>
+            <div class="payment-info">
+                <div class="payment-row">
+                    <span>Tổng tiền:</span>
+                    <span id="total-price">0 VND</span>
+                </div>
+                <div class="payment-row">
+                    <span>Giảm giá:</span>
+                    <span id="discount">0 VND</span>
+                </div>
+                <div class="payment-row">
+                    <strong>Thành tiền:</strong>
+                    <strong id="final-price">0 VND</strong>
+                </div>
+                <a href="..//dir_html/payment.html">
+                    <button id="checkout-button">Mua hàng</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer"></div>
+<script src="..//dir_js/merger_header_footer.js"></script>
+<script src="..//dir_js/cart.js"></script>
+</body>
+
+</html>

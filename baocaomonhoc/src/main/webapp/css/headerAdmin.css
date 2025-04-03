@@ -1,0 +1,353 @@
+.topbar {
+    top: 0;
+    z-index: 1005;
+    position: sticky;
+    transition: all 0.3s ease-in-out;
+    height: 100px;
+    background-color: #f9f7f7;
+}
+
+.container-fluid {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    height: 100%;
+    padding-right: calc(1.5rem * 0.5);
+    padding-left: calc(1.5rem * 0.5);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.topbar .topbar-item {
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100px;
+}
+
+.topbar .topbar-item .button-toggle-menu {
+    border: none;
+    border-radius: 0;
+    color: black;
+    background-color: transparent;
+}
+
+.topbar .topbar-item .topbar-button {
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    color: #707793;
+    padding: 0.5rem 0.5rem;
+    position: relative;
+}
+
+.fs-24 {
+    font-size: 24px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* Điều chỉnh vị trí dưới avatar */
+    right: 0;
+    left: auto;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 10px;
+    display: none; /* Ẩn mặc định */
+    z-index: 1000;
+    width: 200px; /* Cố định chiều rộng */
+    border: 1.5px solid #333;
+}
+
+.dropdown-menu.visible {
+    display: block; /* Hiển thị menu khi cần */
+}
+
+.dropdown-menu .dropdown-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #6c757d;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+
+.container-fluid {
+    max-width: 95%;
+}
+
+.topbar .navbar-header {
+    display: flex;
+    margin: 0 auto;
+    height: 100%;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+html[data-menu-size="hidden"].sidebar-enable .main-nav {
+    margin-left: 0;
+    z-index: 1055;
+}
+
+.main-nav.active {
+    left: 0;
+    z-index: 1050;
+    margin-left: 0;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    background: white;
+    width: 280px;
+    min-width: 280px;
+    padding-bottom: 1.5rem;
+    border-right: solid 1px #000000;
+    border-radius: 10px;
+}
+
+body {
+    transition: margin-left 0.3s ease;
+}
+
+body.menu-active {
+    margin-left: 0;
+}
+
+body.menu-active .opacity {
+    pointer-events: none;
+}
+
+body.menu-active .main-nav {
+    pointer-events: auto;
+}
+
+.main-nav {
+    z-index: 1050;
+    margin-left: 0;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    background: white;
+    width: 280px;
+    min-width: 280px;
+    padding-bottom: 1.5rem;
+    border-right: solid 1px #000000;
+    border-radius: 10px;
+    left: -300px;
+    transition: left 0.3s ease;
+}
+
+.logo-box {
+    position: sticky;
+    overflow: hidden;
+    text-align: center;
+    padding: 0 25px;
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap;
+    max-height: 100px;
+    height: 100%;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+    display: flex;
+}
+
+.logo-light {
+    display: block;
+}
+
+.logo-lg {
+    height: 65px;
+}
+
+.scrollbar {
+    height: calc(100% - 100px);
+    width: 100%;
+}
+
+[data-simplebar] {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+.simplebar-wrapper {
+    overflow: hidden;
+    width: inherit;
+    height: inherit;
+    max-width: inherit;
+    max-height: inherit;
+}
+
+.simplebar-mask {
+    direction: inherit;
+    position: absolute;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    z-index: 0;
+}
+
+.simplebar-offset {
+    direction: inherit;
+    box-sizing: inherit;
+    resize: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.simplebar-content-wrapper {
+    direction: inherit;
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    height: 100%;
+    width: auto;
+    visibility: visible;
+    overflow: auto;
+    max-width: 100%;
+    max-height: 100%;
+    scrollbar-width: none;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.menu-title {
+    cursor: default;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    font-weight: 600;
+    padding: 10px calc(25px * 1.25);
+    transition: all 0.3s ease-in-out;
+    height: 36px;
+}
+
+.nav-item {
+    padding: calc(10px * 0.1) 0;
+}
+
+.nav-link.active {
+    border-left-color: blue;
+}
+
+.nav-icon {
+    font-size: 22px;
+}
+
+.nav-link {
+    display: flex;
+    gap: 12px;
+    line-height: 1;
+    align-items: center;
+    white-space: nowrap;
+    transition: all 0.3s ease-in-out;
+    font-size: 15px;
+    padding: 10px 25px;
+    border-left: 3px solid transparent;
+    font-weight: 500;
+    color: #0000005e;
+    background-color: transparent;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.sub-navbar-nav {
+    flex-direction: column;
+    padding-left: 12px;
+}
+
+.sub-nav-item {
+    padding: calc(10px * 0.5) 25px;
+    cursor: pointer;
+}
+
+.sub-nav-link {
+    display: flex;
+    position: relative;
+    white-space: nowrap;
+    transition: all 0.3s ease-in-out;
+    color: #0000005e;
+    font-size: calc(15px * 0.95);
+    padding: calc(10px * 0.25) 25px;
+    text-decoration: none;
+}
+
+.menu-arrow::after {
+    right: 25px;
+    display: block;
+    content: "\ea4a";
+    font-family: boxicons;
+    margin-left: auto;
+    position: absolute;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+    color: #0000005e;
+    font-size: calc(15px * 1.25);
+}
+
+.nav-item .navbar-nav .nav-item .menu-arrow:hover {
+    color: black;
+    background-color: transparent;
+}
+
+.menu-arrow[aria-expanded="true"]::after {
+    transform: rotate(-180deg);
+    color: black;
+}
+
+.menu-arrow:hover::after {
+    color: black;
+}
+
+.sub-nav-link:hover {
+    transform: translateX(5px);
+    color: black;
+}

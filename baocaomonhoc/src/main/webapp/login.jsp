@@ -1,3 +1,4 @@
+<%@ page import="org.eclipse.tags.shaded.org.apache.xpath.operations.String" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -47,6 +48,7 @@
         <div class="tabs">
             <div id="login-tab" class="active">
                 <a href="${pageContext.request.contextPath}/login">Đăng Nhập</a>
+                <a href="otherLogin.jsp">Khac</a>
             </div>
             <div id="register-tab">
                 <a href="${pageContext.request.contextPath}/register">Đăng Ký</a>
@@ -59,7 +61,7 @@
                 <%
                     String error = (String) request.getAttribute("error");
 //                    String uname = request.getParameter("username");
-                    if (error==null) error="";
+                 //   if (error==null) error=" ";
 //                    if (uname==null) uname="";
                 %>
                 <p style="text-align: center;"><%= error %> </p>
@@ -68,7 +70,7 @@
                             type="text"
                             id="login_username"
                             placeholder="Tên người dùng"
-<%--                            value="<%= uname %>"--%>
+                    <%--                            value="<%= uname %>"--%>
                             name="username"
                             required
                     />
@@ -89,6 +91,19 @@
                     <p><a href="#">Quên mật khẩu?</a></p>
                 </div>
             </div>
+            <div class="form-gr social-login">
+                <p style="text-align: center;">Hoặc đăng nhập bằng</p>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="https://accounts.google.com/o/oauth2/auth?scope=email&redirect_uri=http://localhost:8080/baocaomonhoc_war/loginGoogle&response_type=code
+    &client_id=326215351283-qci2bpspjmc6s664oi7tpamo3p0avqdm.apps.googleusercontent.com" class="btn btn-danger">
+                        <i class="fab fa-google"></i> Google
+                    </a>
+                    <a href="https://www.facebook.com/dialog/oauth?client_id=9cf97d51a7a996756c20c21b06976b60&redirect_uri=https://localhost:8080/baocaomonhoc_war/loginFacebook" class="btn btn-primary">
+                        <i class="fab fa-facebook-f"></i> Facebook
+                    </a>
+                </div>
+            </div>
+
         </form>
     </div>
 </div>

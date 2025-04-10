@@ -98,7 +98,7 @@
     &client_id=326215351283-qci2bpspjmc6s664oi7tpamo3p0avqdm.apps.googleusercontent.com" class="btn btn-danger">
                         <i class="fab fa-google"></i> Google
                     </a>
-                    <a href="https://www.facebook.com/dialog/oauth?client_id=9cf97d51a7a996756c20c21b06976b60&redirect_uri=https://localhost:8080/baocaomonhoc_war/loginFacebook" class="btn btn-primary">
+                    <a href="https://www.facebook.com/dialog/oauth?client_id=1387595732415859&redirect_uri=http://localhost:8080/baocaomonhoc_war/loginFacebook" class="btn btn-primary">
                         <i class="fab fa-facebook-f"></i> Facebook
                     </a>
                 </div>

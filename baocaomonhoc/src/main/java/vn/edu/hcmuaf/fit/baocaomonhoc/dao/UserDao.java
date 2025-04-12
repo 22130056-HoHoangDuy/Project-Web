@@ -56,4 +56,23 @@ public class UserDao {
         boolean users = userDao.updateUser("Lê Thanh Hải", "22130000");
         System.out.println(users);
     }
+    public Users findUserByEmail(String email) {
+        return jdbi.withHandle(handle ->
+                handle.createQuery("SELECT * FROM users WHERE email = :email")
+                        .bind("email", email)
+                        .mapToBean(Users.class)
+                        .findFirst()
+                        .orElse(null)  // Trả về null nếu không tìm thấy người dùng
+        );
+    }
+
+    public boolean updateUserPassword(String email, String newPassword) {
+        String sql = "UPDATE users SET password = :password WHERE email = :email";
+        return jdbi.withHandle(handle ->
+                handle.createUpdate(sql)
+                        .bind("email", email)
+                        .bind("password", newPassword)
+                        .execute() > 0);
+    }
+    
 }

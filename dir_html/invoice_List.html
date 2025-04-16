@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice List</title>
+     <!-- App favicon -->
+     <link rel="shortcut icon" href="https://techzaa.in/larkon/admin/assets/images/favicon.ico">
+
+     <!-- Vendor css (Require in all Page) -->
+     <link href="../bootcss/vendor.min.css" rel="stylesheet" type="text/css">
+
+     <!-- Icons css (Require in all Page) -->
+     <link href="../bootcss/icons.min.css" rel="stylesheet" type="text/css">
+
+     <!-- App css (Require in all Page) -->
+     <link href="../bootcss/app.min.css" rel="stylesheet" type="text/css">
+
+     <script src="./Invoices List_files/config.js.download"></script>
+     <link rel="stylesheet" href="invoice_List.css">
+</head>
+<body>
+        <div class="page-content">
+             <div class="container-xxl">
+                  <div class="row">
+                       <div class="col-xl-12">
+                            <div class="card">
+                                 <div class="d-flex card-header justify-content-between align-items-center">
+                                      <div>
+                                           <h4 class="card-title">Tất cả hóa đơn</h4>
+                                      </div>
+                                      <div class="dropdown">
+                                           <div class="search-box">
+                                                <input type="text" class="form-control" id="customerSearch" placeholder="Tìm khách hàng...">
+                                                <i class="ri-search-line search-icon"></i>
+                                            </div>
+                                      </div>    
+                                 </div>
+                                 <div class="card-body p-0">
+                                      <div class="table-responsive">
+                                           <table class="table align-middle mb-0 table-hover table-centered">
+                                                <thead class="bg-light-subtle">
+                                                     <tr>
+                                                          <th>Mã Hóa Đơn</th>
+                                                          <th>Tên Khách Hàng</th>
+                                                          <th>Ngày Đặt Hàng</th>
+                                                          <th>Tổng</th>
+                                                          <th>Phương Thức Thanh Toán</th>
+                                                          <th>Trạng Thái</th>
+                                                     </tr>
+                                                </thead>
+                                                <tbody>
+                                                     <tr>
+                                                          <td>
+                                                               <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input" id="customCheck2">
+                                                                    <label class="form-check-label" for="customCheck2">&nbsp;</label>
+                                                               </div>
+                                                          </td>
+                                                          <td><a href="javascript: void(0);" class="text-body">#INV2540</a> </td>
+                                                          <td> Michael A. Miner</td>
+                                                          <td> 07/01/2023</td>
+                                                          <td> $452 </td>
+                                                          <td> Mastercard </td>
+                                                          <td> <span class="badge bg-success-subtle text-success py-1 px-2">Hoàn Thành</span> </td>
+                                                     </tr>
+
+                                                     <tr>
+                                                          <td>
+                                                               <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input" id="customCheck3">
+                                                                    <label class="form-check-label" for="customCheck3">&nbsp;</label>
+                                                               </div>
+                                                          </td>
+                                                          <td><a href="javascript: void(0);" class="text-body">#INV3924</a> </td>
+                                                          <td> Theresa T. Brose</td>
+                                                          <td> 07/01/2023</td>
+                                                          <td> $783 </td>
+                                                          <td> Visa </td>
+                                                          <td> <span class="badge bg-danger-subtle text-danger px-2 py-1">Hủy</span> </td>
+                                                        
+                                                     </tr>
+
+                                                     <tr>
+                                                          <td>
+                                                               <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input" id="customCheck4">
+                                                                    <label class="form-check-label" for="customCheck4">&nbsp;</label>
+                                                               </div>
+                                                          </td>
+                                                          <td><a href="javascript: void(0);" class="text-body">#INV5032</a> </td>
+                                                          <td>James L. Erickson</td>
+                                                          <td>07/01/2023 </td>
+                                                          <td> $134 </td>
+                                                          <td> Paypal </td>
+                                                          <td>
+                                                               <span class="badge bg-success-subtle text-success py-1 px-2">Hoàn Thành</span>
+                                                          </td>
+                                                         
+                                                     </tr>
+                                                     <tr>
+                                                          <td>
+                                                               <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input" id="customCheck5">
+                                                                    <label class="form-check-label" for="customCheck5">&nbsp;</label>
+                                                               </div>
+                                                          </td>
+                                                          <td><a href="javascript: void(0);" class="text-body">#INV1695</a> </td>
+                                                          <td> Lily W. Wilson</td>
+                                                          <td>07/01/2023</td>
+                                                          <td> $945 </td>
+                                                          <td> Mastercard</td>
+                                                          <td><span class="badge bg-primary-subtle text-primary py-1 px-2">Chờ thanh toán</span></td>
+                                                        
+                                                     </tr>
+                                                     <tr>
+                                                          <td>
+                                                               <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input" id="customCheck6">
+                                                                    <label class="form-check-label" for="customCheck6">&nbsp;</label>
+                                                               </div>
+                                                          </td>
+                                                          <td><a href="javascript: void(0);" class="text-body">#INV8473</a> </td>
+                                                          <td> Sarah M. Brooks</td>
+                                                          <td> 07/01/2023 </td>
+                                                          <td> $421</td>
+                                                          <td> Visa</td>
+                                                          <td> <span class="badge bg-danger-subtle text-danger px-2 py-1 ">Hủy</span></td>
+                                                        
+                                                     </tr>
+                                                     <tr>
+                                                          <td>
+                                                               <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input" id="customCheck7">
+                                                                    <label class="form-check-label" for="customCheck7">&nbsp;</label>
+                                                               </div>
+                                                          </td>
+                                                          <td><a href="javascript: void(0);" class="text-body">#INV2150</a> </td>
+                                                          <td> Joe K. Hall</td>
+                                                          <td>07/01/2023
+                                                          </td>
+                                                          <td>$251 </td>
+                                                          <td> Paypal </td>
+                                                          <td> <span class="badge bg-success-subtle text-success py-1 px-2">Hoàn thành</span> </td>
+                                                        
+                                                     </tr>
+                                                     <tr>
+                                                          <td>
+                                                               <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input" id="customCheck7">
+                                                                    <label class="form-check-label" for="customCheck7">&nbsp;</label>
+                                                               </div>
+                                                          </td>
+                                                          <td><a href="javascript: void(0);" class="text-body">#INV5636</a> </td>
+                                                          <td>Ralph Hueber</td>
+                                                          <td>07/01/2023
+                                                          </td>
+                                                          <td>$310 </td>
+                                                          <td> Visa </td>
+                                                          <td> <span class="badge bg-success-subtle text-success py-1 px-2">Hoàn thành</span> </td>
+                                                        
+                                                     </tr>
+                                                     <tr>
+                                                          <td>
+                                                               <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input" id="customCheck7">
+                                                                    <label class="form-check-label" for="customCheck7">&nbsp;</label>
+                                                               </div>
+                                                          </td>
+                                                          <td><a href="javascript: void(0);" class="text-body">#INV2940</a> </td>
+                                                          <td>Sarah  Drescher</td>
+                                                          <td>07/01/2023
+                                                          </td>
+                                                          <td>$241 </td>
+                                                          <td> Mastercard </td>
+                                                          <td> <span class="badge bg-success-subtle text-success py-1 px-2">Hoàn thành</span> </td>
+                                                        
+                                                     </tr>
+                                                     <tr>
+                                                          <td>
+                                                               <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input" id="customCheck7">
+                                                                    <label class="form-check-label" for="customCheck7">&nbsp;</label>
+                                                               </div>
+                                                          </td>
+                                                          <td><a href="javascript: void(0);" class="text-body">#INV9027</a> </td>
+                                                          <td>Leonie Meister</td>
+                                                          <td>07/01/2023
+                                                          </td>
+                                                          <td>$136 </td>
+                                                          <td> Paypal </td>
+                                                          <td><span class="badge bg-primary-subtle text-primary py-1 px-2">Chờ</span></td>
+                                                        
+                                                     </tr>
+                                                </tbody>
+                                           </table>
+                                      </div>
+                                      <!-- end table-responsive -->
+                                 </div>
+                                 <div class="card-footer border-top">
+                                      <nav aria-label="Page navigation example">
+                                           <ul class="pagination justify-content-end mb-0">
+                                                <li class="page-item"><a class="page-link" href="javascript:void(0);">Trước</a></li>
+                                                <li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+                                                <li class="page-item"><a class="page-link" href="javascript:void(0);">Sau</a></li>
+                                           </ul>
+                                      </nav>
+                                 </div>
+                            </div>
+                       </div>
+                  </div>
+             </div>
+          </div>
+ 
+   <script src="../dir_js/invoice.js"></script> 
+</body>
+</html>

@@ -132,3 +132,17 @@ h2 {
     border-radius: 5px;
     z-index: 1001;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+.social-login .btn {
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: bold;
+}
+>>>>>>> DuyBao
+>>>>>>> ec004b6e2ad9031d77e0d24c106c72dce6feefaf

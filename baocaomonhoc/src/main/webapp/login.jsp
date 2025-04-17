@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 <%@ page import="org.eclipse.tags.shaded.org.apache.xpath.operations.String" %>
->>>>>>> DuyBao
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -51,10 +48,7 @@
         <div class="tabs">
             <div id="login-tab" class="active">
                 <a href="${pageContext.request.contextPath}/login">Đăng Nhập</a>
-<<<<<<< HEAD
-=======
                 <a href="otherLogin.jsp">Khac</a>
->>>>>>> DuyBao
             </div>
             <div id="register-tab">
                 <a href="${pageContext.request.contextPath}/register">Đăng Ký</a>
@@ -67,11 +61,8 @@
                 <%
                     String error = (String) request.getAttribute("error");
 //                    String uname = request.getParameter("username");
-<<<<<<< HEAD
                     if (error==null) error="";
-=======
                  //   if (error==null) error=" ";
->>>>>>> DuyBao
 //                    if (uname==null) uname="";
                 %>
                 <p style="text-align: center;"><%= error %> </p>
@@ -80,11 +71,8 @@
                             type="text"
                             id="login_username"
                             placeholder="Tên người dùng"
-<<<<<<< HEAD
 <%--                            value="<%= uname %>"--%>
-=======
                     <%--                            value="<%= uname %>"--%>
->>>>>>> DuyBao
                             name="username"
                             required
                     />
@@ -105,8 +93,6 @@
                     <p><a href="#">Quên mật khẩu?</a></p>
                 </div>
             </div>
-<<<<<<< HEAD
-=======
             <div class="form-gr social-login">
                 <p style="text-align: center;">Hoặc đăng nhập bằng</p>
                 <div class="d-flex justify-content-center gap-3">
@@ -119,8 +105,6 @@
                     </a>
                 </div>
             </div>
-
->>>>>>> DuyBao
         </form>
     </div>
 </div>
@@ -154,8 +138,5 @@
     }
 </script>
 </body>
-<<<<<<< HEAD
 </html>
-=======
 </html>
->>>>>>> DuyBao
